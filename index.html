@@ -11,54 +11,57 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
         }
 
         header {
             background-color: #333;
             color: #fff;
-            padding: 10px 0;
             text-align: center;
+            padding: 20px 0;
         }
 
-/*         section {
+        main {
             padding: 20px;
-            margin: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        } */
+        }
 
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .columns {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
 
-        h2 {
-            color: #333;
+        .column {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        ul {
-            list-style: none;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .offer {
-            background-color: #4CAF50;
+        footer {
+            background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            padding: 10px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .column {
+                flex: 1 0 100%;
+            }
         }
     </style>
 </head>
@@ -68,167 +71,268 @@
         <h1>Descubre Punta Cana</h1>
     </header>
 
-    <section>
-        <h2>Enclaves Culturales</h2>
-        <ul>
-            <li>Altos de Chavón
-                <p>Una réplica de un pueblo mediterráneo del siglo XVI, este lugar cuenta con calles empedradas, galerías de arte, tiendas y restaurantes. Es un destino cultural y artístico fascinante.</p>
-                <img src="https://ohmagazinerd.com/wp-content/uploads/2022/11/alto-de-chavon-la-romana.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Catedral de Higüey 
-                <p>Una iglesia icónica con una impresionante arquitectura que representa la fe católica arraigada en la cultura dominicana.</p>
-                <img src="https://eldia.com.do/wp-content/uploads/2016/01/800px-Bas%C3%ADlicaHig%C3%BCey.jpg" width="250" height="250" alt="Catedral de Higüey">
-            </li>
-            <li>Basílica de Nuestra Señora de la Altagracia 
-                <p>Un importante lugar de peregrinación religiosa, dedicado a la Virgen de la Altagracia, patrona de la República Dominicana.</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Bas%C3%ADlica_de_Nuestra_Se%C3%B1ora_de_la_Altagracia.jpg" width="250" height="250" alt="Basílica de Nuestra Señora de la Altagracia">
-            </li>
-            <li>Museo Indígena de Altos de Chavón
-                <p>Un museo que presenta la historia de los indígenas taínos, los habitantes originales de la isla, a través de artefactos y exhibiciones educativas.</p>
+    <main>
+        <section class="section">
+            <h2 class="section-title">Enclaves Culturales</h2>
+            <div class="columns">
+                <div class="column">
+                    <center>
+                        <h3>Altos de Chavón</h3>
+                        <p>Una réplica de un pueblo mediterráneo del siglo XVI, este lugar cuenta con calles empedradas, galerías de arte, tiendas y restaurantes. Es un destino cultural y artístico fascinante.</p>
+                        <img src="https://ohmagazinerd.com/wp-content/uploads/2022/11/alto-de-chavon-la-romana.jpg" width="250" height="250" alt="Altos de Chavón">
+                    </center>
+                </div>
+                <div class="column">
+                    <center>
+                        <h3>Catedral de Higüey</h3>
+                        <p>Una iglesia icónica con una impresionante arquitectura que representa la fe católica arraigada en la cultura dominicana.</p>
+                        <img src="https://eldia.com.do/wp-content/uploads/2016/01/800px-Bas%C3%ADlicaHig%C3%BCey.jpg" width="250" height="250" alt="Catedral de Higüey">
+                    </center>
+                </div>
+                <div class="column">
+                    <center>
+                        <h3>Basílica de Nuestra Señora de la Altagracia</h3>
+                        <p>Un importante lugar de peregrinación religiosa, dedicado a la Virgen de la Altagracia, patrona de la República Dominicana.</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Bas%C3%ADlica_de_Nuestra_Se%C3%B1ora_de_la_Altagracia.jpg" width="250" height="250" alt="Basílica de Nuestra Señora de la Altagracia">
+                    </center>
+                </div>
+                <div class="column">
+                    <center>
+                        <h3>Museo Indígena de Altos de Chavón</h3>
+                        <p>Un museo que presenta la historia de los indígenas taínos, los habitantes originales de la isla, a través de artefactos y exhibiciones educativas.</p>
                 <img src="https://images.mnstatic.com/6f/67/6f673ad1e2bcb550a6199a7962e5ae04.jpg" width="250" height="250" alt="Museo Indígena de Altos de Chavón">
-            </li>
-            <li>Pueblo de Higüey 
-                <p>Un lugar encantador donde los visitantes pueden experimentar la vida cotidiana de los dominicanos, explorar mercados locales y disfrutar de la auténtica cocina dominicana.</p>
+                    </center>
+                </div>
+                <div class="column">
+                    <center>
+                        <h3>Pueblo de Higüey</h3>
+                        <p>Un lugar encantador donde los visitantes pueden experimentar la vida cotidiana de los dominicanos, explorar mercados locales y disfrutar de la auténtica cocina dominicana.</p>
                 <img src="https://www.colonialtours.com/images/higueybasilicas.jpg" width="250" height="250" alt="Pueblo de Higüey">
-            </li>
-        </ul>
-    </section>
+                    </center>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section>
-        <h2>Enclaves Naturales</h2>
-        <ul>
-            <li>Parque Nacional del Este
-                <p>Un área protegida con playas vírgenes, cuevas, una gran diversidad de aves y animales marinos, y senderos que permiten a los visitantes explorar la belleza natural de la región.</p>
-                <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/65/c6.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Reserva Ecológica Ojos Indígenas
-                <p>Una hermosa reserva natural que alberga cenotes, senderos y una variedad de flora y fauna autóctonas, ofreciendo una experiencia inmersiva en la naturaleza.</p>
-                <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/116000/116832-Indigenous-Eyes-Ecological-Park.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Playa Bávaro
-                <p>Esta playa es conocida por su arena blanca y aguas cristalinas, ofreciendo un entorno natural paradisíaco para los amantes del sol y el mar.</p>
-                <img src="https://www.mitur.gob.do/wp-content/uploads/2022/02/Playa-Bavaro.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Isla Saona
-                <p>Una isla tropical virgen con playas de arena blanca, aguas turquesas y palmeras, que ofrece un paisaje natural impresionante y es ideal para excursiones en barco.</p>
-                <img src="https://www.vacacionesbarcelo.com/images/1280/720/f0e5da067e284c56509a5ba1e5f990cd.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Hoyo Azul
-                <p>Una cenota de aguas azules ubicada en medio de la selva, rodeada de vegetación exuberante. Es un lugar natural único para nadar y disfrutar de la belleza natural del entorno.</p>
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/de/0a/8b/caption.jpg?w=1200&h=-1&s=1" width="250" height="250" alt="Altos de Chavón">
-            </li>
-        </ul>
-    </section>
+    <main>
+        <section class="section">
+            <h2 class="section-title">Enclaves Naturales</h2>
+            <div class="columns">
+                <div class="column">
+                    <center>
+                        <h3>Parque Nacional del Este</h3>
+                        <p>Un área protegida con playas vírgenes, cuevas, una gran diversidad de aves y animales marinos, y senderos que permiten a los visitantes explorar la belleza natural de la región.</p>
+                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/65/c6.jpg" width="250" height="250" alt="Altos de Chavón">
+                    </center>
+                </div>
+                <div class="column">
+                    <center>
+                        <h3>Reserva Ecológica Ojos Indígenas</h3>
+                        <p>Una hermosa reserva natural que alberga cenotes, senderos y una variedad de flora y fauna autóctonas, ofreciendo una experiencia inmersiva en la naturaleza.</p>
+                        <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/116000/116832-Indigenous-Eyes-Ecological-Park.jpg" width="250" height="250" alt="Altos de Chavón">
+                    </center>
+                </div>
+                <div class="column">
+                    <center>
+                        <h3>Playa Bávaro</h3>
+                        <p>Esta playa es conocida por su arena blanca y aguas cristalinas, ofreciendo un entorno natural paradisíaco para los amantes del sol y el mar.</p>
+                        <img src="https://www.mitur.gob.do/wp-content/uploads/2022/02/Playa-Bavaro.jpg" width="250" height="250" alt="Altos de Chavón">
+                    </center>
+                </div>
+                <div class="column">
+                    <center>
+                        <h3>Isla Saona</h3>
+                        <p>Una isla tropical virgen con playas de arena blanca, aguas turquesas y palmeras, que ofrece un paisaje natural impresionante y es ideal para excursiones en barco.</p>
+                        <img src="https://www.vacacionesbarcelo.com/images/1280/720/f0e5da067e284c56509a5ba1e5f990cd.jpg" width="250" height="250" alt="Altos de Chavón">
+                    </center>
+                </div>
+                <div class="column">
+                    <center>
+                        <h3>Hoyo Azul</h3>
+                        <p>Una cenota de aguas azules ubicada en medio de la selva, rodeada de vegetación exuberante. Es un lugar natural único para nadar y disfrutar de la belleza natural del entorno.</p>
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/de/0a/8b/caption.jpg?w=1200&h=-1&s=1" width="250" height="250" alt="Altos de Chavón">
+                    </center>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section>
-        <h2>Transportes</h2>
-        <ul>
-            <li>Aeropuerto Internacional de Punta Cana
-                <p>Uno de los aeropuertos más importantes de la región, conecta Punta Cana con numerosos destinos internacionales.</p>
-                <img src="https://www.tourinews.es/uploads/s1/58/52/76/aeropuerto-internacional-de-punta-cana.jpeg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Servicios de traslado
-                <p>Ofrece una variedad de servicios de traslado desde el aeropuerto a hoteles y resorts, facilitando el viaje de los turistas.</p>
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/6a/9c/68/caption.jpg?w=500&h=400&s=1" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Taxi y transporte público
-                <p>Los taxis y autobuses locales son accesibles y convenientes para que los turistas se desplacen por la zona.</p>
-                <img src="https://www.deprontoabordo.com/wp-content/uploads/2018/05/Repu%CC%81blica-Dominicana-en-Transporte-Pu%CC%81blico-01.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Alquiler de coches
-                <p>Muchas empresas de alquiler de coches operan en Punta Cana, permitiendo a los visitantes explorar la región a su propio ritmo.</p>
-                <img src="https://www.iwaysys.com/images/escaparate/5749b1bb6c725-CHEVRIOLETALL.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Transporte marítimo
-                <p>Punta Cana ofrece excursiones en barco y catamarán para explorar las aguas cristalinas y las islas cercanas.</p>
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/f9/19/bf/eco-friendly-catamaran.jpg?w=1200&h=900&s=1" width="250" height="250" alt="Altos de Chavón">
-            </li>
-        </ul>
-    </section>
+    <main>
+        <section class="section">
+            <h2 class="section-title">Transportes</h2>
+            <div class="columns">
+                <div class="column">
+                        <center>
+                            <h3>Aeropuerto Internacional de Punta Cana</h3>
+                            <p>Uno de los aeropuertos más importantes de la región, conecta Punta Cana con numerosos destinos internacionales.</p>
+                            <img src="https://www.tourinews.es/uploads/s1/58/52/76/aeropuerto-internacional-de-punta-cana.jpeg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Servicios de traslado</h3>
+                            <p>Ofrece una variedad de servicios de traslado desde el aeropuerto a hoteles y resorts, facilitando el viaje de los turistas.</p>
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/6a/9c/68/caption.jpg?w=500&h=400&s=1" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Taxi y transporte público</h3>
+                            <p>Los taxis y autobuses locales son accesibles y convenientes para que los turistas se desplacen por la zona.</p>
+                            <img src="https://www.deprontoabordo.com/wp-content/uploads/2018/05/Repu%CC%81blica-Dominicana-en-Transporte-Pu%CC%81blico-01.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Alquiler de coches</h3>
+                            <p>Muchas empresas de alquiler de coches operan en Punta Cana, permitiendo a los visitantes explorar la región a su propio ritmo.</p>
+                            <img src="https://www.iwaysys.com/images/escaparate/5749b1bb6c725-CHEVRIOLETALL.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Transporte marítimo</h3>
+                            <p>Punta Cana ofrece excursiones en barco y catamarán para explorar las aguas cristalinas y las islas cercanas.</p>
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/f9/19/bf/eco-friendly-catamaran.jpg?w=1200&h=900&s=1" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                </div>
+        </section>
+    </main>
 
-    <section>
-        <h2>Hoteles</h2>
-        <ul>
-            <li>Resorts todo incluido
-                <p>Punta Cana es conocida por sus lujosos resorts todo incluido que ofrecen comodidades de clase mundial, playas privadas y una experiencia inolvidable.</p>
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/29/51/24/d2/hyatt-zilara-cap-cana.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Hoteles boutique
-                <p>También hay encantadores hoteles boutique que brindan un ambiente más íntimo y personalizado para los visitantes que buscan una experiencia exclusiva.</p>
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/16/37/1e/d7/panoramic-of-the-pool.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Eco-lodges
-                <p>Para los amantes de la naturaleza, hay eco-lodges que ofrecen una estancia sostenible en armonía con el entorno natural.</p>
-                <img src="https://joveneslowcost.com/contenido/uploads/2014/09/natura-park-vista.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Hospedaje local
-                <p>Los turistas pueden optar por alojarse en casas de huéspedes y hostales administrados por locales para vivir una experiencia auténtica y conocer la cultura dominicana.</p>
-                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/298707373.jpg?k=79a124e0b9804c456c5d6a16ef0136e6f467ac1eb738b3676a4a5f8b06948ed1&o=&hp=1" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Villas privadas
-                <p>Existen opciones de alquiler de villas privadas con vistas panorámicas al mar y todas las comodidades para familias y grupos grandes.</p>
-                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/249174607.jpg?k=40fd031e8a7ec58589ca4749e7b2e652bcd987859be6bfa5e0ed3e5210dd0e36&o=&hp=1" width="250" height="250" alt="Altos de Chavón">
-            </li>
-        </ul>
-    </section>
+    <main>
+        <section class="section">
+            <h2 class="section-title">Hoteles</h2>
+            <div class="columns">
+                <div class="column">
+                        <center>
+                            <h3>Resorts todo incluido</h3>
+                            <p>Punta Cana es conocida por sus lujosos resorts todo incluido que ofrecen comodidades de clase mundial, playas privadas y una experiencia inolvidable.</p>
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/29/51/24/d2/hyatt-zilara-cap-cana.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Hoteles boutique</h3>
+                            <p>También hay encantadores hoteles boutique que brindan un ambiente más íntimo y personalizado para los visitantes que buscan una experiencia exclusiva.</p>
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/16/37/1e/d7/panoramic-of-the-pool.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Eco-lodges</h3>
+                            <p>Para los amantes de la naturaleza, hay eco-lodges que ofrecen una estancia sostenible en armonía con el entorno natural.</p>
+                            <img src="https://joveneslowcost.com/contenido/uploads/2014/09/natura-park-vista.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Hospedaje local</h3>
+                            <p>Los turistas pueden optar por alojarse en casas de huéspedes y hostales administrados por locales para vivir una experiencia auténtica y conocer la cultura dominicana.</p>
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/298707373.jpg?k=79a124e0b9804c456c5d6a16ef0136e6f467ac1eb738b3676a4a5f8b06948ed1&o=&hp=1" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Villas privadas</h3>
+                            <p>Existen opciones de alquiler de villas privadas con vistas panorámicas al mar y todas las comodidades para familias y grupos grandes.</p>
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/249174607.jpg?k=40fd031e8a7ec58589ca4749e7b2e652bcd987859be6bfa5e0ed3e5210dd0e36&o=&hp=1" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                </div>
+        </section>
+    </main>
 
-    <section>
-        <h2>Gastronomía</h2>
-        <ul>
-            <li>Plátanos fritos
-                <p>Un plato típico de la República Dominicana, los plátanos fritos son una delicia sabrosa y crujiente.</p>
-                <img src="https://mydominicankitchen.com/wp-content/uploads/2015/03/Tostones-Fried-Green-Plantains-Smart-Little-Cookie-3-800x1151.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Mofongo
-                <p>Un plato a base de plátanos o yuca, machacados y mezclados con ajo y chicharrón, una opción popular en los restaurantes locales.</p>
-                <img src="https://puntacana-bavaro.com/wp-content/uploads/2019/01/mofongo.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Pescado y mariscos frescos
-                <p>Dada su ubicación costera, Punta Cana ofrece una gran variedad de pescados y mariscos frescos preparados de diversas maneras.</p>
-                <img src="https://s3.ppllstatics.com/eldiariomontanes/www/multimedia/202108/16/media/cortadas/newspaint-1629101891501-kn4E-U1502555429167cG-1248x770@Diario%20Montanes.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Sancocho
-                <p>Un guiso espeso y sabroso preparado con diferentes tipos de carnes, verduras y especias, es un plato tradicional dominicano.</p>
-                <img src="https://i0.wp.com/bavaronews.com/wp-content/uploads/2021/08/Sancocho-Dominicano.jpeg?fit=450%2C300&ssl=1" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Rum y cocteles tropicales
-                <p>La República Dominicana es famosa por su ron, por lo que los turistas pueden disfrutar de cocteles exóticos y refrescantes a base de ron local.</p>
-                <img src="https://www.puntacanaadventures.com/wp-content/uploads/2017/08/punta-cana-beach-cocktails-1.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-        </ul>
-    </section>
+    <main>
+        <section class="section">
+            <h2 class="section-title">Gastronomía</h2>
+            <div class="columns">
+                <div class="column">
+                        <center>
+                            <h3>Plátanos fritos</h3>
+                            <p>Un plato típico de la República Dominicana, los plátanos fritos son una delicia sabrosa y crujiente.</p>
+                            <img src="https://mydominicankitchen.com/wp-content/uploads/2015/03/Tostones-Fried-Green-Plantains-Smart-Little-Cookie-3-800x1151.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Mofongo</h3>
+                            <p>Un plato a base de plátanos o yuca, machacados y mezclados con ajo y chicharrón, una opción popular en los restaurantes locales.</p>
+                            <img src="https://puntacana-bavaro.com/wp-content/uploads/2019/01/mofongo.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Pescado y mariscos frescos</h3>
+                            <p>Dada su ubicación costera, Punta Cana ofrece una gran variedad de pescados y mariscos frescos preparados de diversas maneras.</p>
+                            <img src="https://s3.ppllstatics.com/eldiariomontanes/www/multimedia/202108/16/media/cortadas/newspaint-1629101891501-kn4E-U1502555429167cG-1248x770@Diario%20Montanes.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Sancocho</h3>
+                            <p>Un guiso espeso y sabroso preparado con diferentes tipos de carnes, verduras y especias, es un plato tradicional dominicano.</p>
+                            <img src="https://i0.wp.com/bavaronews.com/wp-content/uploads/2021/08/Sancocho-Dominicano.jpeg?fit=450%2C300&ssl=1" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Rum y cocteles tropicales</h3>
+                            <p>La República Dominicana es famosa por su ron, por lo que los turistas pueden disfrutar de cocteles exóticos y refrescantes a base de ron local.</p>
+                            <img src="https://www.puntacanaadventures.com/wp-content/uploads/2017/08/punta-cana-beach-cocktails-1.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                </div>
+        </section>
+    </main>
 
-    <section>
-        <h2>Festividades y Eventos</h2>
-        <ul>
-            <li>Carnaval de Punta Cana
-                <p>Una celebración colorida con desfiles, música en vivo y bailes que muestran la rica cultura dominicana.</p>
-                <img src="https://www.mitur.gob.do/wp-content/uploads/2023/02/carnaval-de-puntacana.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Festival de Merengue y Bachata
-                <p>Un evento musical que celebra los ritmos tradicionales de la República Dominicana, atrayendo a artistas y amantes de la música de todo el mundo.</p>
-                <img src="https://i.ytimg.com/vi/LRIpkHuCagw/maxresdefault.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Semana Santa
-                <p>Una festividad importante con procesiones religiosas, eventos culturales y actividades en la playa que atraen a locales y turistas por igual.</p>
-                <img src="https://visitdominicanrepublic.com/wp-content/uploads/2022/04/semana-santa-spring-break-punta-cana-shutterstock.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Festival del Coco
-                <p>Una celebración que destaca la importancia del coco en la cultura local, con degustaciones, concursos y espectáculos en vivo.</p>
-                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/f5/ce/fb.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-            <li>Competencia de Golf Punta Cana
-                <p>Para los aficionados al golf, Punta Cana organiza torneos de golf internacionales que atraen a jugadores profesionales y aficionados por igual.</p>
-                <img src="https://www.golfinspain.es/b/cont/uploads/2022/01/golf_main.jpg" width="250" height="250" alt="Altos de Chavón">
-            </li>
-        </ul>
-    </section>
+    <main>
+        <section class="section">
+            <h2 class="section-title">Festividades y Eventos</h2>
+            <div class="columns">
+                <div class="column">
+                        <center>
+                            <h3>Carnaval de Punta Cana</h3>
+                            <p>Una celebración colorida con desfiles, música en vivo y bailes que muestran la rica cultura dominicana.</p>
+                            <img src="https://www.mitur.gob.do/wp-content/uploads/2023/02/carnaval-de-puntacana.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Festival de Merengue y Bachata</h3>
+                            <p>Un evento musical que celebra los ritmos tradicionales de la República Dominicana, atrayendo a artistas y amantes de la música de todo el mundo.</p>
+                            <img src="https://i.ytimg.com/vi/LRIpkHuCagw/maxresdefault.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Semana Santa</h3>
+                            <p>Una festividad importante con procesiones religiosas, eventos culturales y actividades en la playa que atraen a locales y turistas por igual.</p>
+                            <img src="https://visitdominicanrepublic.com/wp-content/uploads/2022/04/semana-santa-spring-break-punta-cana-shutterstock.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Festival del Coco</h3>
+                            <p>Una celebración que destaca la importancia del coco en la cultura local, con degustaciones, concursos y espectáculos en vivo.</p>
+                            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/f5/ce/fb.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                    <div class="column">
+                        <center>
+                            <h3>Competencia de Golf Punta Cana</h3>
+                            <p>Para los aficionados al golf, Punta Cana organiza torneos de golf internacionales que atraen a jugadores profesionales y aficionados por igual.</p>
+                            <img src="https://www.golfinspain.es/b/cont/uploads/2022/01/golf_main.jpg" width="250" height="250" alt="Altos de Chavón">
+                        </center>
+                    </div>
+                </div>
+        </section>
+    </main>
 
-    <div class="offer">
+    <footer>
         <h2>Oferta Especial</h2>
         <p>Descubre el Paraíso en Punta Cana: Sumérgete en aguas turquesas, relájate en playas de arena blanca y experimenta la calidez de la cultura dominicana. Con nuestro paquete exclusivo, disfrutarás de estancias en lujosos resorts todo incluido, degustarás la exquisita gastronomía local, explorarás la riqueza natural y cultural de la región, y te unirás a emocionantes festividades locales. Además, te ofrecemos traslados sin complicaciones, opciones de alojamiento para todos los gustos y actividades emocionantes para toda la familia. ¡Reserva ahora y deja que Punta Cana te enamore con su belleza, su hospitalidad y su encanto caribeño! Tu escapada perfecta te espera en Punta Cana.</p>
-    </div>
-
+        <p>© 2023 Ever Cifuentes. Todos los derechos reservados.</p>
+    </footer>
 </body>
-
 </html>
